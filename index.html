@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" charset="width=devise-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -15,8 +15,31 @@
                 <li>Contact</li>
             </ul>
         </section>
-        <section>
-            <h1>Hello, I am John Boateng, ajunior Javerscript front endweb developer</h1>
+        <section class="intro-wrapper">
+            <h4 class="intro" contenteditable="true">
+                Hello, I am John Boateng, a junior Java script front end web developer
+            </h4>
+        </section>
+        <section class="credentials">
+            <div class="name-div">
+                <input id="name" type="text" placeholder="name">
+            </div>
+            <div>
+                <input id="age" type="number" placeholder="age"/>
+            </div>
+            <div>
+                <button id="add-btn">Add</button>
+            </div>
+        </section>
+        <section class="table-section">
+            <div id="table-container">
+                 <table class="table">
+                
+                <tbody>                
+                </tbody>
+            </table>
+            </div>
+           
         </section>
 
         <script src="index.js"></script>
