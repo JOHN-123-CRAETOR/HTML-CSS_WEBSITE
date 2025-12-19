@@ -141,6 +141,18 @@ tbody tr:nth-child(odd) {
     height: 1em;
 }
 
+#clear-div{
+    display: flex;
+    justify-content: center;
+}
+
+#clear-btn{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
 
 
 

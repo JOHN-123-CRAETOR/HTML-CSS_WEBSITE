@@ -4,6 +4,8 @@ const addBtn = document.querySelector("#add-btn");
 const nameMsg = document.getElementById("name-msg");
 const ageMsg = document.getElementById("age-msg");
 const gender = document.getElementById("gender");
+const clearBtn = document.querySelector("#clear-btn");
+const tableContainer = document.querySelector("#table-container");
 
 
 let id = 0;
@@ -73,7 +75,7 @@ addBtn.addEventListener('click', () => {
        tbody = document.createElement('tbody');
         table.appendChild(thead);
         
-        document.body.appendChild(table);
+        tableContainer.appendChild(table);
 
     }
 
@@ -95,4 +97,13 @@ addBtn.addEventListener('click', () => {
 
         nameInput.value = "";
         ageInput.value = "";
+})
+
+gender.style.backgroundColor = "gray";
+clearBtn.style.backgroundColor = "red";
+clearBtn.style.border = "none";
+
+clearBtn.addEventListener('click', () => {
+    table.remove();
+    table = null;
 })
