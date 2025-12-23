@@ -1,3 +1,33 @@
+
+const navItems = document.querySelectorAll("ul li");
+const pages = document.querySelectorAll("#home, #about, #service, #contact");
+
+
+function showPage(pageId){
+    pages.forEach((page) => {
+        page.style.display = "none";
+    });
+
+    document.getElementById(pageId).style.display = "block";
+}
+
+
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const route = item.dataset.route;
+        showPage(route);
+    });
+});
+
+
+showPage("about")
+
+
+
+/////////////////HOME PAGE/////////////////////
+
+
+
 const nameInput = document.querySelector("#name");
 const ageInput = document.querySelector("#age");
 const addBtn = document.querySelector("#add-btn");
@@ -6,14 +36,18 @@ const ageMsg = document.getElementById("age-msg");
 const gender = document.getElementById("gender");
 const clearBtn = document.querySelector("#clear-btn");
 const tableContainer = document.querySelector("#table-container");
-
+const menuBtn = document.getElementById("menu-btn");
+const navMenu = document.getElementById("nav-menu");
 
 let id = 0;
 let table;
 let tbody;
 
-
 addBtn.style.backgroundColor = "green";
+
+menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle("show");
+});
 
 addBtn.addEventListener('click', () => {
 
@@ -107,3 +141,33 @@ clearBtn.addEventListener('click', () => {
     table.remove();
     table = null;
 })
+
+
+
+//////////////////ABOUT PAGE//////////////////////
+
+const loginMsg = document.getElementById("login-msg");
+const loginEmail = document.getElementById("login-email");
+const loginPassword = document.getElementById("login-password");
+const loginBtn = document.getElementById("btn");
+const emailPrompt = document.getElementById("email-prompt");
+const passwordPrompt = document.getElementById("password-prompt");
+
+loginBtn.addEventListener('click', () => {
+    const email = loginEmail.value;
+    const password = loginPassword.value;
+
+    if(email.trim() === ""){
+        passwordPrompt.textContent = "Please enter a valid email";
+        passwordPrompt.style.color = "red";
+        loginEmail.style.borderColor = "red";
+        loginEmail.style.borderWidth = "3px";
+    }
+
+    if(password.trim() === ""){
+        emailPrompt.textContent = "Please enter a valid email";
+        emailPrompt.style.color = "red";
+        loginPassword.style.borderColor = "red";
+        loginPassword.style.borderWidth = "3px";
+        } 
+});

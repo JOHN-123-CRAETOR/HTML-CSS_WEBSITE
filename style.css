@@ -1,16 +1,73 @@
-body{
-    background-color: rgb(255, 255, 255);
+/* ===================== NAVBAR ===================== */
+
+.page {
+    background-color: #555;
+    padding: 20px;
+    border-radius: 10px;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.page{
-    display: flex;
-    justify-content: right;
-    margin: 0;
-    padding: 20px;
-    background-color: #555;
-    border-radius: 10px;
-    
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
 }
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-menu li {
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+#nav-menu li:hover {
+    background-color: #000;
+}
+
+/* HAMBURGER */
+#menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+    #menu-btn {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+        width: 100%;
+    }
+
+    #nav-menu.show {
+        display: block;
+    }
+
+    #nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+}
+
 
 ul {
     list-style: none;
@@ -129,8 +186,13 @@ tbody tr:nth-child(odd) {
     
 }
 
+#add-btn{
+    padding-inline: 30px;
+    border: none;
+}
+
 #gender{
-    padding-block: none;
+    padding-block: 10px;;
 }
 
 
@@ -153,9 +215,144 @@ tbody tr:nth-child(odd) {
     border-radius: 8px;
 }
 
+/*/////////////////////////////////// About Page ////////////////////////////////////*/
+
+#forget-div{
+    padding-left: 20px;
+}
+
+#about{
+    font-family: sans-serif;
+    border: 1px solid;
+    margin: 50px;
+    border-radius: 10px;
+    background-color: #aca7a7;
+    box-shadow: 10px 10px 10px rgb(75, 73, 73);
+    height: 80vh;
+    
+}
+
+@media(max-width: 600px){
+    #about{
+        border: 1px solid;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #aca7a7;
+        box-shadow: 10px 10px 10px rgb(75, 73, 73);
+
+    }
+}
+
+#about > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-msg{
+    font-family: sans-serif, Arial;
+    font-size: 40px;
+}
+
+@media(max-width: 600px){
+    #login-msg{
+        font-size: 30px;
+    }
+}
+
+#login-div{
+    padding-top: 5em;
+    padding-bottom: 20px;
+}
+
+#login-input{
+    flex-direction: column;
+}
+
+#login-email, #login-password{
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 35rem;
+    max-width: 40rem;
+}
 
 
 
+@media(max-width: 600px){
+    #login-email, #login-password{
+        padding: 15px;
+        min-width: 17rem;
+        max-width: 20rem;
 
+    }
+}
 
+#forget-div{
+    padding: 20px;
+}
 
+#btn{
+    padding: 20px 290px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+}
+
+@media(max-width: 600px){
+    #btn{
+        padding: 10px 135px;
+    }
+
+    #add-logins{
+    padding: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+}
+
+#add-logins{
+    padding: 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+#google-btn, #fb-btn, #ig-btn, #meta-btn{
+    min-width: 10rem;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+#google-btn{
+    background-color: rgb(206, 206, 116);
+}
+
+#fb-btn{
+    background-color: rgb(70, 70, 228);
+}
+
+#ig-btn{
+    background-color: pink;
+}
+
+#meta-btn{
+    background-color: gray;
+}
+
+#email-prompt, #password-prompt{
+    padding-right: 25rem;
+    margin-top: 0;
+}
+
+@media(max-width: 600px){
+    #email-prompt, #password-prompt{
+    padding-right: 9rem;
+    font-size: small;
+    margin-top: 1;
+}
+}

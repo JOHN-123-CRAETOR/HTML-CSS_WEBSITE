@@ -8,14 +8,21 @@
     </head>
     <body>
         <section class="page">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Contact</li>
-            </ul>
+           <div class="nav-wrapper">
+                <div class="logo">JB</div>
+                <button id="menu-btn">&#9776;</button>
+                    <nav id="nav-menu">
+                        <ul>
+                            <li data-route="home">Home</li>
+                            <li data-route="about">About</li>
+                            <li data-route="service">Services</li>
+                            <li data-route="contact">Contact</li>
+                        </ul>
+                    </nav>
+           </div>
         </section>
-        <section class="intro-wrapper">
+        <section id="home">
+            <section class="intro-wrapper">
             <h4 class="intro" contenteditable="true">
                 Hello, I am John Boateng, a junior Java script front end web developer
             </h4>
@@ -33,9 +40,7 @@
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
-            <div>
                 <button id="add-btn">Add</button>
-            </div>
         </section>
         <section class="table-section">
             <div id="table-container">
@@ -53,7 +58,36 @@
         <section id="clear-div">
             <button id="clear-btn">Clear All</button>
         </section>
-       
+        </section>
+        
+            <section id="about">
+                <div id="login-div">
+                    <h1 id="login-msg">Welcome Back</h1>
+                </div>
+                <div id="login-input">
+                    <input id="login-email" placeholder="Email or Phone number"/>
+                    <p id="email-prompt"></p>
+                    <input id="login-password" placeholder="Password"/>
+                    <p id="password-prompt"></p>
+                </div>
+                <div id="forget-div">
+                    <p id="forget-pass">Forget Password</p>
+                </div>
+                <div id="btn-div">
+                    <button id="btn">Login</button>
+                </div>
+                <div>
+                    <p>Or login with</p>
+                </div>
+                <div id="add-logins">
+                    <button id="google-btn">Google</button>
+                    <button id="fb-btn">Facebook</button>
+                    <button id="ig-btn">Instagram</button>
+                    <button id="meta-btn">Meta</button>
+                </div>
+            </section>
+            <section id="service">Service page</section>
+            <section id="contact">Contact page</section>
        
 
         <script src="index.js"></script>
