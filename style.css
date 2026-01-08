@@ -581,7 +581,7 @@ tbody tr:nth-child(odd) {
 
 @keyframes slideDown{
     to{
-        transform: translateX(0); /* ✅ ends centered */
+        transform: translateX(0); 
         opacity: 1;
     }
 }
