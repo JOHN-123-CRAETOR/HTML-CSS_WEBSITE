@@ -34,7 +34,6 @@
     background-color: #000;
 }
 
-/* HAMBURGER */
 #menu-btn {
     display: none;
     font-size: 28px;
@@ -355,8 +354,13 @@ tbody tr:nth-child(odd) {
 }
 
 @media(max-width: 600px){
-    #email-prompt, #password-prompt{
+    #email-prompt{
     padding-right: 9rem;
+    font-size: small;
+    margin-top: 1;
+}
+  #password-prompt{
+    padding-right: 8rem;
     font-size: small;
     margin-top: 1;
 }
