@@ -20,7 +20,7 @@ navItems.forEach(item => {
 });
 
 
-showPage("landing-page")
+showPage("home")
 
 
 
