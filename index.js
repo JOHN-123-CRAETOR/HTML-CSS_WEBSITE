@@ -1,6 +1,6 @@
 
 const navItems = document.querySelectorAll("ul li");
-const pages = document.querySelectorAll("#home, #about, #service, #contact");
+const pages = document.querySelectorAll("#home, #about, #service, #contact, #landing-page");
 
 
 function showPage(pageId){
@@ -20,7 +20,7 @@ navItems.forEach(item => {
 });
 
 
-showPage("about")
+showPage("landing-page")
 
 
 
@@ -57,7 +57,7 @@ addBtn.addEventListener('click', () => {
 
     if (name === "" && age === ""){
         nameMsg.textContent = "Enter a valid name";
-        ageMsg.textContent = "Enter a valid name";
+        ageMsg.textContent = "Enter a valid age";
         ageInput.style.borderColor = "red";
         nameInput.style.borderColor = "red";
         return;
@@ -156,18 +156,46 @@ const passwordPrompt = document.getElementById("password-prompt");
 loginBtn.addEventListener('click', () => {
     const email = loginEmail.value;
     const password = loginPassword.value;
+    let isValid = true;
 
     if(email.trim() === ""){
-        passwordPrompt.textContent = "Please enter a valid email";
+        emailPrompt.textContent = "Please enter a valid email";
         passwordPrompt.style.color = "red";
         loginEmail.style.borderColor = "red";
         loginEmail.style.borderWidth = "3px";
+        isValid = false;
     }
 
     if(password.trim() === ""){
-        emailPrompt.textContent = "Please enter a valid email";
+        passwordPrompt.textContent = "Please enter a valid password";
         emailPrompt.style.color = "red";
         loginPassword.style.borderColor = "red";
         loginPassword.style.borderWidth = "3px";
-        } 
+        isValid = false;
+    } 
+    
+    if(isValid){
+        showPage("landing-page");
+
+    }
 });
+
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+
+function showSlide(i) {
+    if(i < 0) index = images.length - 1;
+    else if(i >= images.length) index = 0;
+    else index = i;
+
+    slides.style.transform = `translateX(${-index * 100}%)`;
+}
+
+prevBtn.addEventListener('click', () => showSlide(index - 1));
+nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+setInterval(() => showSlide(index + 1), 5000);

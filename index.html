@@ -1,94 +1,142 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <section class="page">
-           <div class="nav-wrapper">
-                <div class="logo">JB</div>
-                <button id="menu-btn">&#9776;</button>
-                    <nav id="nav-menu">
-                        <ul>
-                            <li data-route="home">Home</li>
-                            <li data-route="about">About</li>
-                            <li data-route="service">Services</li>
-                            <li data-route="contact">Contact</li>
-                        </ul>
-                    </nav>
-           </div>
-        </section>
-        <section id="home">
-            <section class="intro-wrapper">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <section class="page">
+        <div class="nav-wrapper">
+            <div class="logo">JB</div>
+            <button id="menu-btn">&#9776;</button>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li data-route="home">Home</li>
+                    <li data-route="about">About</li>
+                    <li data-route="service">Services</li>
+                    <li data-route="contact">Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="intro-wrapper">
             <h4 class="intro" contenteditable="true">
-                Hello, I am John Boateng, a junior Java script front end web developer
+                Hello, I am John Boateng, a junior JavaScript front-end web developer
             </h4>
-        </section>
+        </div>
+
         <section class="credentials">
-            <div class="name-div">
-                <input id="name" type="text" placeholder="name"><br/>
+            <div>
+                <input id="name" type="text" placeholder="Name">
                 <p id="name-msg"></p>
             </div>
+
             <div>
-                <input id="age" type="number" placeholder="age"/>
+                <input id="age" type="number" placeholder="Age">
                 <p id="age-msg"></p>
             </div>
+
             <select id="gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option>Male</option>
+                <option>Female</option>
             </select>
-                <button id="add-btn">Add</button>
+
+            <button id="add-btn">Add</button>
         </section>
+
         <section class="table-section">
-            <div id="table-container">
-                 <table class="table">
-                    <thead>
-                    </thead>
-                
-                    <tbody>               
-                    </tbody>
-                </table>
-                 
-                </div>
-
+            <table id="table-container">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
         </section>
-        <section id="clear-div">
+
+        <div id="clear-div">
             <button id="clear-btn">Clear All</button>
-        </section>
-        </section>
-        
-            <section id="about">
-                <div id="login-div">
-                    <h1 id="login-msg">Welcome Back</h1>
-                </div>
-                <div id="login-input">
-                    <input id="login-email" placeholder="Email or Phone number"/>
-                    <p id="email-prompt"></p>
-                    <input id="login-password" placeholder="Password"/>
-                    <p id="password-prompt"></p>
-                </div>
-                <div id="forget-div">
-                    <p id="forget-pass">Forget Password</p>
-                </div>
-                <div id="btn-div">
-                    <button id="btn">Login</button>
-                </div>
-                <div>
-                    <p>Or login with</p>
-                </div>
-                <div id="add-logins">
-                    <button id="google-btn">Google</button>
-                    <button id="fb-btn">Facebook</button>
-                    <button id="ig-btn">Instagram</button>
-                    <button id="meta-btn">Meta</button>
-                </div>
-            </section>
-            <section id="service">Service page</section>
-            <section id="contact">Contact page</section>
-       
+        </div>
+    </section>
 
-        <script src="index.js"></script>
-    </body>
+    <!-- HOME -->
+    <section id="home">
+        <div id="login-div">
+            <h1 id="login-msg">Welcome Back</h1>
+        </div>
+
+        <div id="login-input">
+            <input id="login-email" placeholder="Email or Phone number">
+            <p id="email-prompt"></p>
+
+            <input id="login-password" placeholder="Password">
+            <p id="password-prompt"></p>
+        </div>
+
+        <div id="forget-div">
+            <p>Forget Password</p>
+        </div>
+
+        <div id="btn-div">
+            <button id="btn">Login</button>
+        </div>
+
+        <div>
+            <p>Or login with</p>
+        </div>
+
+        <div id="add-logins">
+            <button id="google-btn">Google</button>
+            <button id="fb-btn">Facebook</button>
+            <button id="ig-btn">Instagram</button>
+            <button id="meta-btn">Meta</button>
+        </div>
+    </section>
+
+    <!-- LANDING -->
+    <section id="landing-page">
+
+        <div id="landing">
+            <div class="landing-content">
+                <h1>Build Modern Web Experiences</h1>
+                <p>I create clean, responsive websites using modern JavaScript.</p>
+
+                <div class="landing-actions">
+                    <button id="start-btn">Get Started</button>
+                    <button class="secondary-btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="landing1">
+            <h1>I am John Boateng</h1>
+        </div>
+
+        <div class="description">
+            <h1>Get what you want from me</h1>
+        </div>
+
+        <div class="slider">
+            <div class="slides">
+                <img src="images/car1.webp">
+                <img src="images/car2.webp">
+                <img src="images/car3.webp">
+                <img src="images/car4.webp">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+
+    </section>
+
+    <section id="service">Service Page</section>
+    <section id="contact">Contact Page</section>
+
+    <script src="index.js"></script>
+</body>
+</html>
